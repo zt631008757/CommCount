@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    defaultConfig {
+        applicationId "vip.mengqin.diandezhun"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "e088f16cd1f3c17757fe7396", //Portal上注册的包名对应的 appKey.
+                JPUSH_CHANNEL : "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('mengqin_diandezhun_release.keystore')
+            storePassword '3EQXhDu83C6JhhfKSBnyCYRTbx'
+            keyAlias 'mengqin_diandezhun_release'
+            keyPassword '3EQXhDu83C6JhhfKSBnyCYRTbx'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+
+
+}
+
+dependencies {
+    api project(path: ':BaseLibrary')
+
+    // ButterKnife 注解库：https://github.com/JakeWharton/butterknife
+    api 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //极光一键登录
+    implementation 'cn.jiguang.sdk:jverification:2.7.1'  // 此处以2.7.1 版本为例。
+    implementation 'cn.jiguang.sdk:jcore:2.8.2'  // 此处以JCore 2.8.2 版本为例。
+}

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_round10dp_ffffff"
+            app:tabIndicator="@drawable/shape_tab_indicator"
+            app:tabIndicatorColor="@color/mainColor"
+            app:tabIndicatorHeight="2dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/mainColor"
+            app:tabTextColor="#333333" />
+
+        <ImageView
+            android:id="@+id/iv_type_manage"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ico_count_type_manage"></ImageView>
+
+    </LinearLayout>
+
+    <com.android.baselibrary.view.MultiStateView
+        android:id="@+id/multiplestatusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/view_public_empty"
+        app:msv_errorView="@layout/view_public_error_view"
+        app:msv_loadingView="@layout/view_public_loading_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                android:id="@+id/smartrefreshlayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_round8dp_ffffff"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp" />
+
+            </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_manage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/view_public_line"></include>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_quanxuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/iv_quanxuan"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ico_unselect"></ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="全选"></TextView>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"></View>
+
+                    <TextView
+                        android:id="@+id/tv_delete"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="#f00"
+                        android:gravity="center"
+                        android:text="删除"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_collect"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="#ff7902"
+                        android:gravity="center"
+                        android:text="汇总"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:textStyle="bold"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </com.android.baselibrary.view.MultiStateView>
+</LinearLayout>

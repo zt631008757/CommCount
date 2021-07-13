@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="CommCount"></dbname>
+    <version value="10"></version>
+    <list>
+        <mapping class="com.android.diandezhun.bean.Count_LengthInfo"></mapping>
+        <mapping class="com.android.diandezhun.bean.Count_CompanyInfo"></mapping>
+        <mapping class="com.android.diandezhun.bean.Count_DetailInfo"></mapping>
+        <mapping class="com.android.diandezhun.bean.Count_FormRecord"></mapping>
+        <mapping class="com.android.diandezhun.bean.CommCount_Type"></mapping>
+    </list>
+</litepal>

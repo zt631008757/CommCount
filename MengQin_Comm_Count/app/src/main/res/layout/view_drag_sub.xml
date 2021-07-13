@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/change_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/add_your_view_here"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- add your self view here -->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_corners_bg"></View>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:scaleType="fitXY"
+            android:src="@drawable/ico_img_count_frame_1"></ImageView>
+
+        <ImageView
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ico_img_count_frame_2"></ImageView>
+
+        <ImageView
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ico_img_count_frame_3"></ImageView>
+
+        <ImageView
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:scaleType="fitXY"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ico_img_count_frame_4"></ImageView>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="24px"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ico_img_count_frame_center1"></ImageView>
+
+        <ImageView
+            android:layout_width="22px"
+            android:layout_height="35dp"
+            android:scaleType="fitXY"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ico_img_count_frame_center2"></ImageView>
+
+        <ImageView
+            android:layout_width="22px"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/ico_img_count_frame_center2"></ImageView>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="23px"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ico_img_count_frame_center1"></ImageView>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--头部-->
+        <LinearLayout
+            android:id="@+id/ll_head"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#000">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="6dp"
+                    android:src="@drawable/ico_camare_back"></ImageView>
+
+                <ImageView
+                    android:id="@+id/iv_flash"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:src="@drawable/ico_customcamare_openlight"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="正面拍照"
+                    android:textColor="#ffffffff"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewview"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#000"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="22dp"
+                android:paddingRight="20dp">
+
+                <ImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:src="@drawable/ico_customcamare_photo" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_take_photo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/ico_customcamare_takephoto" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/iv_camare"
+                    android:layout_width="47dp"
+                    android:layout_height="47dp"
+                    android:src="@drawable/ico_customcamare_camare" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <SeekBar
+        android:layout_alignParentBottom="true"
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="155dp"
+        android:max="100"
+        android:maxHeight="5dp"
+        android:min="0"
+        android:minHeight="5dp"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar_seekbar_camare"
+        android:thumb="@drawable/shape_seekbar_hand1"></SeekBar>
+
+</RelativeLayout>

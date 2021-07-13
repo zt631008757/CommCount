@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.android.diandezhun.ui.view.MultiStateView
+        android:id="@+id/multiplestatusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_errorView="@layout/view_public_error_view"
+        app:msv_loadingView="@layout/view_public_loading_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </com.android.diandezhun.ui.view.MultiStateView>
+</RelativeLayout>

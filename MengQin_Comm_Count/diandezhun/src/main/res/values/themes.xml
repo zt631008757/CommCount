@@ -1,0 +1,36 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Model" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--        colorPrimary：主要品牌颜色，一般用于ActionBar背景-->
+        <!--        colorPrimaryDark：默认用于顶部状态栏和底部导航栏-->
+        <!--        colorPrimaryVariant：主要品牌颜色的可选颜色-->
+        <!--        colorSecondary：第二品牌颜色-->
+        <!--        colorSecondaryVariant：第二品牌颜色的可选颜色-->
+        <!--        colorPrimarySurface：对应Light主题指向colorPrimary，Dark主题指向colorSurface-->
+        <!--        colorOn[Primary, Secondary, Surface …]，在Primary等这些背景的上面内容的颜色，例如ActioBar上面的文字颜色-->
+        <!--        colorAccent：默认设置给colorControlActivated，一般是主要品牌颜色的明亮版本补充-->
+        <!--        colorControlNormal：图标和控制项的正常状态颜色-->
+        <!--        colorControlActivated：图标和控制项的选中颜色（例如Checked或者Switcher）-->
+        <!--        colorControlHighlight：点击高亮效果（ripple或者selector）-->
+        <!--        colorButtonNormal：按钮默认状态颜色-->
+        <!--        colorSurface：cards, sheets, menus等控件的背景颜色-->
+        <!--        colorBackground：页面的背景颜色-->
+        <!--        colorError：展示错误的颜色-->
+        <!--        textColorPrimary：主要文字颜色-->
+        <!--        textColorSecondary：可选文字颜色-->
+
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--文字-->
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textSize">14sp</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+</resources>

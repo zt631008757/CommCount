@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dialog_bg_color"></View>
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shape_tophalf_round16dp_ffffff"
+        android:orientation="vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <!--标题-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <TextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="#ff999999"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="补充详情"
+                android:textColor="#ff222222"
+                android:textSize="18sp" />
+
+            <com.android.baselibrary.view.Comm_SubmitBtnView
+                android:id="@+id/csb_ok"
+                android:layout_width="60dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                app:csb_text="保存" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数量"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_count"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#ff36363c"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="根"
+                android:textColor="#ff36363c"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="共"
+                android:textColor="#ff36363c"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_all_length"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="#ff36363c"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="米"
+                android:textColor="#ff36363c"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <include layout="@layout/view_public_line"></include>
+
+        <!--长度-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="长度"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_length"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:background="@color/transparent"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:text="0"
+                android:textColor="#ff36363c"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="米"
+                android:textColor="#ff36363c"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:background="@drawable/shape_round4dp_stroke_maincolor"
+                    android:layout_width="75dp"
+                    android:layout_height="36dp"
+                    android:gravity="center"
+                    android:textColor="@color/mainColor"
+                    android:text="出库"></TextView>
+
+                <TextView
+                    android:background="@drawable/shape_round4dp_stroke_00cb56"
+                    android:layout_width="75dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:textColor="#00CB56"
+                    android:text="入库"></TextView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/view_public_line"></include>
+
+        <!--公司名称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="公司名称"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+            <com.android.baselibrary.view.Comm_EditView
+                android:id="@+id/et_company"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cev_gravity="right"
+                app:cev_hint="请输入公司名称" />
+
+        </LinearLayout>
+
+        <com.android.diandezhun.ui.view.WordWrapView
+            android:id="@+id/wordwrapview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <include layout="@layout/view_public_line"></include>
+        <!--备注-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="备注"
+                android:textColor="#ff666666"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <com.android.baselibrary.view.Comm_EditView
+            android:id="@+id/et_remark"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_round4dp_eeeeee"
+            android:padding="12dp"
+            app:cev_hint="请输入备注"
+            app:cev_multipleLines="true" />
+
+    </LinearLayout>
+</RelativeLayout>

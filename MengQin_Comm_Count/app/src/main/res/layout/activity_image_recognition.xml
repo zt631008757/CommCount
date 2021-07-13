@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ico_commcount_share"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分享"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_show_control_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_eyes"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ico_commcount_eyes_hide"></ImageView>
+
+            <TextView
+                android:id="@+id/iv_showhiden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="隐藏"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+
+        <LinearLayout
+            android:id="@+id/ll_save"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="24dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ico_commcount_save"></ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="保存"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.android.baselibrary.view.MultiStateView
+        android:id="@+id/multiplestatusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/view_public_empty"
+        app:msv_errorView="@layout/view_public_error_view"
+        app:msv_loadingView="@layout/view_public_loading_view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#4000"
+                android:orientation="vertical">
+
+                <!--图片-->
+                <com.luck.picture.lib.photoview.PhotoView
+                    android:id="@+id/iv_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter" />
+
+                <!--数数量区域-->
+                <RelativeLayout
+                    android:id="@+id/rl_view_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--圆圈容器-->
+                    <com.android.diandezhun.ui.view.CommCount_CircleContainer
+                        android:id="@+id/rl_circle_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <!--拖拽控件  矩形, 背景颜色必须要设置，不然拖拽有bug-->
+                    <com.android.diandezhun.ui.view.DragView
+                        android:id="@+id/dragview_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#0000" />
+
+                    <!--拖拽控件  手势, 背景颜色必须要设置，不然拖拽有bug-->
+                    <com.android.diandezhun.ui.view.DragView
+                        android:id="@+id/dragview_container_draw"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#0000"
+                        android:visibility="gone" />
+
+                    <!--画图控件-->
+                    <com.android.diandezhun.ui.view.PaletteView
+                        android:id="@+id/paletteview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </RelativeLayout>
+
+                <!--精度控制操作-->
+                <com.android.diandezhun.ui.view.CommCount_ControlView
+                    android:id="@+id/control_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+            <!--数量信息-->
+            <com.android.diandezhun.ui.view.CommCount_DetailView
+                android:id="@+id/count_detailview"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+            </com.android.diandezhun.ui.view.CommCount_DetailView>
+
+            <!--底部部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:orientation="vertical">
+
+                <!--按钮-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:background="@drawable/shape_comm_title_bgcolor"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                        android:id="@+id/btn_pre_step"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cbb_img="@drawable/ico_commcount_btn_back"
+                        app:cbb_text="上一步" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="25dp"
+                        android:background="#fff"></View>
+
+                    <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                        android:id="@+id/btn_border_type_rect"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cbb_img="@drawable/ico_commcount_btn_rect"
+                        app:cbb_text="框选范围" />
+
+                    <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                        android:id="@+id/btn_border_type_draw"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cbb_img="@drawable/ico_commcount_btn_dianxuan"
+                        app:cbb_text="点选范围" />
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="25dp"
+                        android:background="#fff"></View>
+
+                    <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                        android:id="@+id/btn_buchongxiangqing"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cbb_img="@drawable/ico_commcount_btn_detail"
+                        app:cbb_text="补充详情" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_btn_default"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                            android:id="@+id/btn_bianjihedui"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:cbb_img="@drawable/ico_commcount_btn_edit"
+                            app:cbb_text="编辑核对" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_btn_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="25dp"
+                            android:background="#fff"></View>
+
+                        <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                            android:id="@+id/btn_tiaojiejingdu"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            app:cbb_img="@drawable/ico_commcount_btn_edit"
+                            app:cbb_text="精度调节" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="25dp"
+                        android:background="#fff"></View>
+
+                    <com.android.diandezhun.ui.view.CommCount_BottomBntView
+                        android:id="@+id/btn_jixupaizhao"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:cbb_img="@drawable/ico_commcount_btn_reset"
+                        app:cbb_text="继续拍照" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.android.baselibrary.view.MultiStateView>
+</LinearLayout>

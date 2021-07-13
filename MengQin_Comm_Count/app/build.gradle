@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin: 'com.mob.sdk'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.android.diandezhun"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0.1"
+        multiDexEnabled true
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('mengqin_diandezhun_release.keystore')
+            storePassword '3EQXhDu83C6JhhfKSBnyCYRTbx'
+            keyAlias 'mengqin_diandezhun_release'
+            keyPassword '3EQXhDu83C6JhhfKSBnyCYRTbx'
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+        }
+    }
+}
+
+dependencies {
+    api project(path: ':BaseLibrary')
+
+    // ButterKnife 注解库：https://github.com/JakeWharton/butterknife
+    api 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+
+    //图片压缩
+    implementation 'com.github.nanchen2251:CompressHelper:1.0.5'
+
+    //数据库
+    implementation 'org.litepal.guolindev:core:3.2.3'
+
+    //竖向seekbar
+    implementation 'com.github.Jay-Goo:RangeSeekBar:v2.0.4'
+
+}

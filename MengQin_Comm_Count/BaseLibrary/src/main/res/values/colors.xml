@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="mainColor" tools:ignore="ResourceName">#73DEB3</color>
+    <color name="mainColor_light" tools:ignore="ResourceName">#8073DEB3</color>
+
+    <color name="textColor_pull_head" tools:ignore="ResourceName">#333333</color>
+    <color name="transparent" tools:ignore="ResourceName">#00000000</color>
+
+    <color name="dialog_bg_color" tools:ignore="ResourceName">#9555</color>
+    <color name="page_bg">#f5f5f5</color>
+</resources>

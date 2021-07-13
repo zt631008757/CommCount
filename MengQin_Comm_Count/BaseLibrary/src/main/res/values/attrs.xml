@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--圆形进度条-->
+    <declare-styleable name="RoundProgressBar" tools:ignore="ResourceName">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="rp_roundWidth" format="dimension"></attr>
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Comm_SubmitBtnView" tools:ignore="ResourceName">
+        <attr name="csb_textSize" format="integer" />
+        <attr name="csb_text" format="string" />
+        <attr name="csb_bg" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="Comm_EditView" tools:ignore="ResourceName">
+        <attr name="cev_hint" format="string" />
+        <attr name="cev_content" format="string" />
+        <attr name="cev_showLine" format="boolean" />
+        <attr name="cev_maxlength" format="integer" />
+        <attr name="cev_textSize" format="integer" />
+        <attr name="cev_multipleLines" format="boolean" />
+        <attr name="cev_textStyle_bold" format="boolean" />
+        <attr name="cev_gravity" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="cev_inputType" format="enum">
+            <enum name="none" value="0" />
+            <enum name="phoneOrEmail" value="1" />
+            <enum name="password" value="2" />
+            <enum name="number" value="3" />
+            <enum name="numberDecimal" value="4" />
+            <enum name="password_number" value="5" />
+            <enum name="numberAndLetters" value="6" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="Comm_HeadView" tools:ignore="ResourceName">
+        <attr name="ctv_titleName" format="string" />
+        <attr name="ctv_showLine" format="boolean" />
+        <attr name="ctv_title_TextColor" format="color" />
+        <attr name="ctv_right_text_TextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="Comm_TitleView" tools:ignore="ResourceName">
+        <attr name="tv_titleName" format="string" />
+        <attr name="tv_content" format="string" />
+        <attr name="tv_imgSrc" format="reference" />
+        <attr name="tv_showLine" format="boolean" />
+        <attr name="tv_showArr" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView" tools:ignore="ResourceName">
+        <attr name="type" format="enum">
+            <enum name="circle" value="1" />
+            <enum name="round" value="2" />
+        </attr>
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MultiStateView" tools:ignore="ResourceName">
+        <attr name="msv_loadingView" format="reference" />
+        <attr name="msv_emptyView" format="reference" />
+        <attr name="msv_errorView" format="reference" />
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="empty" value="2" />
+            <enum name="loading" value="3" />
+        </attr>
+        <attr name="msv_loading_img_id" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton" tools:ignore="ResourceName">
+        <attr name="sb_shadow_radius" format="reference|dimension" />
+        <attr name="sb_shadow_offset" format="reference|dimension" />
+        <attr name="sb_shadow_color" format="reference|color" />
+        <attr name="sb_uncheck_color" format="reference|color" />
+        <attr name="sb_checked_color" format="reference|color" />
+
+        <attr name="sb_border_width" format="reference|dimension" />
+        <attr name="sb_checkline_color" format="reference|color" />
+        <attr name="sb_checkline_width" format="reference|dimension" />
+        <attr name="sb_uncheckcircle_color" format="reference|color" />
+        <attr name="sb_uncheckcircle_width" format="reference|dimension" />
+        <attr name="sb_uncheckcircle_radius" format="reference|dimension" />
+
+        <attr name="sb_checked" format="reference|boolean" />
+        <attr name="sb_shadow_effect" format="reference|boolean" />
+        <attr name="sb_effect_duration" format="reference|integer" />
+        <attr name="sb_button_color" format="reference|color" />
+        <attr name="sb_show_indicator" format="reference|boolean" />
+        <attr name="sb_background" format="reference|color" />
+        <attr name="sb_enable_effect" format="reference|boolean" />
+    </declare-styleable>
+
+    <!-- 裁剪图片 -->
+    <declare-styleable name="CropImageView" tools:ignore="ResourceName">
+        <attr name="cropMaskColor" format="color" />
+        <attr name="cropBorderColor" format="color" />
+        <attr name="cropBorderWidth" format="dimension" />
+        <attr name="cropFocusWidth" format="dimension" />
+        <attr name="cropFocusHeight" format="dimension" />
+        <attr name="cropStyle" format="enum">
+            <enum name="rectangle" value="0" />
+            <enum name="circle" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#77555555"></View>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="155dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_update_bg" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_update_bg_whilte"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="30dp"
+                android:paddingBottom="14dp">
+
+                <TextView
+                    android:id="@+id/tv_new_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="发现新版本V2.0.1"
+                    android:textColor="#1e1f23"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:id="@+id/scrollview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp">
+
+                    <TextView
+                        android:id="@+id/tv_tips"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="3dp"
+                        android:text="更新说明更新说明更新说明更新说明更新说明更新说明"
+                        android:textColor="#8e9198"
+                        android:textSize="14sp" />
+
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_download"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_round2dp_maincolor"
+                        android:gravity="center"
+                        android:text="立即更新"
+                        android:textColor="#fff"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_loading"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:maxHeight="200dip"
+                            android:minHeight="10dip"
+                            android:indeterminateOnly="false"
+                            android:indeterminateDrawable="@android:drawable/progress_indeterminate_horizontal"
+                            android:progressDrawable="@drawable/progressbar_download"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/tv_progress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="0%"
+                            android:textColor="#fff"
+                            android:textSize="16sp" />
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tv_finish"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_round2dp_maincolor"
+                        android:gravity="center"
+                        android:text="安装"
+                        android:textColor="#fff"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="34dp"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/ico_close_white" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--头部-->
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="@drawable/img_home_mine_bg"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+
+            <com.android.baselibrary.view.RoundImageView
+                android:id="@+id/iv_head"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ico_default_head"
+                app:type="circle"></com.android.baselibrary.view.RoundImageView>
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:text="工程监理小杨"
+                android:textColor="#ffffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="10dp"
+                android:src="@drawable/ico_arr_right_white"></ImageView>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="-24dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_round8dp_ffffff"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="159"
+                android:textColor="#ff36363c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="已使用(天)"
+                android:textColor="#ff999999"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.45"
+                android:textColor="#ff36363c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="累计点数(根)"
+                android:textColor="#ff999999"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:background="#fff"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp">
+
+        <com.android.baselibrary.view.Comm_TitleView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:tv_imgSrc="@drawable/ico_mine_goumaimoban"
+            app:tv_showArr="true"
+            app:tv_titleName="购买模板" />
+
+        <com.android.baselibrary.view.Comm_TitleView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:tv_imgSrc="@drawable/ico_mine_yigoumai"
+            app:tv_showArr="true"
+            app:tv_titleName="已购买的模版" />
+
+        <com.android.baselibrary.view.Comm_TitleView
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:tv_imgSrc="@drawable/ico_mine_fapiao"
+            app:tv_showArr="true"
+            app:tv_titleName="我的发票" />
+
+        <com.android.baselibrary.view.Comm_TitleView
+            android:id="@+id/ctv_guanyuwomen"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:tv_imgSrc="@drawable/ico_mine_guanyuwomen"
+            app:tv_showArr="true"
+            app:tv_titleName="关于我们" />
+
+        <com.android.baselibrary.view.Comm_TitleView
+            android:id="@+id/ctv_setting"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:tv_imgSrc="@drawable/ico_mine_setting"
+            app:tv_showArr="true"
+            app:tv_titleName="设置" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 边 -->
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="4px"
+                android:left="2px"
+                android:right="2px"
+                android:top="1px" />
+            <solid android:color="#0ddd" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="4px"
+                android:left="2px"
+                android:right="2px"
+                android:top="1px" />
+            <solid android:color="#1ddd" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="4px"
+                android:left="2px"
+                android:right="2px"
+                android:top="1px" />
+            <solid android:color="#2ddd" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <padding
+                android:bottom="4px"
+                android:left="2px"
+                android:right="2px"
+                android:top="1px" />
+            <solid android:color="#3ddd" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- 中心背景 -->
+    <item>
+        <shape android:shape="rectangle"
+            android:useLevel="false">
+            <!-- 实心 -->
+            <solid android:color="#ffffff" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</layer-list>

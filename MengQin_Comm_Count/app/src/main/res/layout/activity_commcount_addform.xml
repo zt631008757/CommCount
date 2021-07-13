@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <!--头部-->
+    <LinearLayout
+        android:id="@+id/ll_head"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="#fff"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_public_title"></include>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:orientation="horizontal">
+
+                <com.android.baselibrary.view.Comm_SubmitBtnView
+                    android:id="@+id/btn_save"
+                    android:layout_width="60dp"
+                    android:layout_height="25dp"
+                    app:csb_text="保存"
+                    app:csb_textSize="13" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.android.baselibrary.view.MultiStateView
+        android:id="@+id/multiplestatusView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msv_emptyView="@layout/view_public_empty"
+        app:msv_errorView="@layout/view_public_error_view"
+        app:msv_loadingView="@layout/view_public_loading_view">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="汇总日期："
+                    android:textColor="#555" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="2021-1-1"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <include layout="@layout/view_public_line"></include>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="客户："
+                    android:textColor="#555" />
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="万达"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <!--表格-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/shape_round8dp_stroke_ccc_1px"
+                android:padding="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ccc"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="品名"
+                            android:textColor="#333"></TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="1px"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="长度 M"
+                            android:textColor="#333"></TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="1px"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="数量"
+                            android:textColor="#333"></TextView>
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="1px"
+                            android:layout_weight="1"
+                            android:background="#fff"
+                            android:gravity="center"
+                            android:text="小计 M"
+                            android:textColor="#333"></TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_form_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--备注-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="备注："
+                    android:textColor="#555" />
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="无"
+                    android:textColor="#333" />
+            </LinearLayout>
+
+            <include layout="@layout/view_public_line"></include>
+
+            <LinearLayout
+                android:id="@+id/ll_logo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ico_logo"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="点的准"
+                    android:textColor="#333"
+                    android:textSize="15sp"></TextView>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"></View>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_marker"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/ico_logo"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="扫一扫，下载APP"
+                        android:textColor="#777"
+                        android:textSize="12sp"></TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </com.android.baselibrary.view.MultiStateView>
+</LinearLayout>

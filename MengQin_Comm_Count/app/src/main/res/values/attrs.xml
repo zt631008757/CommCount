@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <declare-styleable name="CommCount_BottomBntView" tools:ignore="ResourceName">
+        <attr name="cbb_img" format="reference" />
+        <attr name="cbb_text" format="string" />
+    </declare-styleable>
+</resources>

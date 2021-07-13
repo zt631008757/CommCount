@@ -1,0 +1,5 @@
+include ':diandezhun'
+include ':picture_library'
+include ':app'
+include ':BaseLibrary'
+rootProject.name = "MengQin_Comm_Count"
